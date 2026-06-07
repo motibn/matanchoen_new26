@@ -14,6 +14,29 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify deploy secrets
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          missing=0
+          for name in DEPLOY_HOST DEPLOY_USER DEPLOY_SSH_KEY; do
+            eval "val=\$$name"
+            if [ -z "$val" ]; then
+              echo "::error::Missing required secret: $name"
+              missing=1
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then
+            echo ""
+            echo "Add secrets at: Settings → Secrets and variables → Actions"
+            echo "Required: DEPLOY_HOST, DEPLOY_USER, DEPLOY_SSH_KEY"
+            echo "See README.md section 'פריסה אוטומטית (GitHub Actions)'"
+            exit 1
+          fi
+          echo "All required deploy secrets are set."
+
       - name: Checkout
         uses: actions/checkout@v4
 

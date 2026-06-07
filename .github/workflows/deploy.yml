@@ -1,0 +1,55 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create deployment archive
+        run: |
+          tar czf deploy.tar.gz \
+            index.html \
+            styles.css \
+            sections.js \
+            contact.js \
+            nav.js \
+            assets
+
+      - name: Upload archive to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          source: deploy.tar.gz
+          target: /tmp/
+          overwrite: true
+
+      - name: Extract on VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script_stop: true
+          script: |
+            set -euo pipefail
+            DEPLOY_PATH="${{ secrets.DEPLOY_PATH }}"
+            if [ -z "$DEPLOY_PATH" ]; then DEPLOY_PATH="/var/www/matanchoen"; fi
+            mkdir -p "$DEPLOY_PATH"
+            tar xzf /tmp/deploy.tar.gz -C "$DEPLOY_PATH"
+            rm -f /tmp/deploy.tar.gz
+            chmod -R a+rX "$DEPLOY_PATH"
+            echo "Deployed to $DEPLOY_PATH"

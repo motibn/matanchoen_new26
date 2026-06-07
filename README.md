@@ -87,15 +87,55 @@ sudo certbot --nginx -d YOUR_DOMAIN -d www.YOUR_DOMAIN
 | A | `@` | IP של ה-VPS |
 | A | `www` | IP של ה-VPS |
 
-### 5. עדכונים עתידיים
+### 5. פריסה אוטומטית (GitHub Actions)
+
+כל push ל-`main` מפעיל workflow שמעלה את הקבצים ל-VPS ב-SSH.
+
+#### הגדרה חד-פעמית
+
+**א. על ה-VPS** — הרץ (החלף `your-domain.co.il` בדומיין):
 
 ```bash
-# מקומי — לאחר שינוי קבצים
+curl -fsSL https://raw.githubusercontent.com/motibn/matanchoen_new26/main/scripts/vps-bootstrap.sh | bash -s your-domain.co.il
+```
+
+או ידנית:
+
+```bash
+bash scripts/vps-bootstrap.sh your-domain.co.il
+```
+
+**ב. מפתח SSH ל-GitHub Actions** — על המחשב שלך:
+
+```bash
+ssh-keygen -t ed25519 -C "github-actions-matanchoen" -f matanchoen_deploy -N ""
+```
+
+- הוסף את `matanchoen_deploy.pub` ל-`~/.ssh/authorized_keys` על ה-VPS
+- את התוכן של `matanchoen_deploy` (המפתח הפרטי) שמור כ-Secret
+
+**ג. Secrets ב-GitHub** — Repository → Settings → Secrets and variables → Actions:
+
+| Secret | דוגמה | חובה |
+|--------|--------|------|
+| `DEPLOY_HOST` | `123.45.67.89` או `your-domain.co.il` | כן |
+| `DEPLOY_USER` | `ubuntu` | כן |
+| `DEPLOY_SSH_KEY` | תוכן מלא של המפתח הפרטי (PEM) | כן |
+| `DEPLOY_PATH` | `/var/www/matanchoen` | לא (ברירת מחדל) |
+
+#### עדכונים
+
+```bash
 git add .
 git commit -m "Update content"
-git push
+git push origin main
+```
 
-# על השרת
+הפריסה רצה אוטומטית. ניתן גם להפעיל ידנית: Actions → Deploy to VPS → Run workflow.
+
+### 6. עדכון ידני (גיבוי)
+
+```bash
 cd /var/www/matanchoen && git pull
 ```
 

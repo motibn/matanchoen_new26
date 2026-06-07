@@ -2,3 +2,8 @@
 Thumbs.db
 *.log
 .cursor/
+node_modules/
+test-ux.js
+screenshot-*.png
+package.json
+package-lock.json

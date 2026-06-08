@@ -1,0 +1,41 @@
+הגדרה ידנית ב-Cloudflare עבור matan-horut.co.il → Vercel
+============================================================
+
+1) התחברות
+   https://dash.cloudflare.com/login
+   בחר את הדומיין: matan-horut.co.il
+
+2) DNS → Records → Add record (השלב הקריטי — חסר כרגע!)
+
+   רשומה חדשה:
+   Type:    CNAME
+   Name:    www
+   Target:  cname.vercel-dns.com
+   Proxy:   DNS only (ענן אפור — לא כתום!)
+   TTL:     Auto
+
+3) וידוא Apex (@) — כבר קיים, רק בדוק:
+
+   Type: A | Name: @ | Content: 216.198.79.1 | Proxy: DNS only
+   Type: A | Name: @ | Content: 64.29.17.1   | Proxy: DNS only
+
+   מחק רשומות ישנות/סותרות (VPS ישן, CNAME כפול על www).
+
+4) SSL/TLS → Overview
+   Encryption mode: Full (לא Flexible)
+
+5) Vercel Dashboard → matanchoen-new26 → Settings → Domains
+   - matan-horut.co.il      (Valid)
+   - www.matan-horut.co.il  (Valid)
+   Redirect: matan-horut.co.il → www.matan-horut.co.il
+   (גם מוגדר ב-vercel.json בפרויקט)
+
+6) בדיקה (אחרי 5–30 דקות):
+
+   dig www.matan-horut.co.il CNAME +short
+   → cname.vercel-dns.com.
+
+   curl -sI https://www.matan-horut.co.il/ | head -5
+   → HTTP/2 200
+
+   git push  (כדי לפרוס את vercel.json עם ה-redirect)

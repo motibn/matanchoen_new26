@@ -51,15 +51,15 @@ document.getElementById('content-root').innerHTML = `
       <div class="card fi">
         <span class="card-num">01</span>
         <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
         </div>
         <h3>לכוון את התדר שלנו</h3>
         <p>אנחנו אלו שעורכים את האווירה בבית. לפני שאנחנו מגיבים או שמים גבול — נעצור לשנייה ונשים לב לטון הדיבור שלנו: כועס ומתוח, או מזמין ונעים? כשאנחנו בוחרים בשקט, הבית מסתנכרן איתנו.</p>
       </div>
       <div class="card fi" style="transition-delay:.08s">
         <span class="card-num">02</span>
-        <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3"/><path d="m8 12h.01"/><path d="M2 9h2a2 2 0 0 1 2 2"/><path d="M22 9h-2a2 2 0 0 0-2 2"/><path d="M16 6h2"/><path d="M8 6H6"/><path d="M12 4V2"/><path d="M10 6 8 8"/><path d="M14 6l2 2"/></svg>
+        <div class="card-icon card-icon-hug" aria-hidden="true">
+          <img src="assets/icon-heart-hug.png" alt="" width="38" height="38" loading="lazy" />
         </div>
         <h3>לבנות גשרים של חיבור</h3>
         <p>בזמנים מתוחים הילדים צריכים לדעת שאנחנו שם בשבילם, גם כשאנחנו לא לידם. כשיוצאים — נגיד לילד בדיוק איפה אנחנו ומתי חוזרים. נפחית ביקורת והערות, ונכניס חמלה. כך נוצר בית שפשוט נעים להיות בו, למרות הרעש שבחוץ.</p>

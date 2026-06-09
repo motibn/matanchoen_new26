@@ -294,6 +294,8 @@ section{position:relative}
   display:flex;align-items:center;justify-content:center;
   color:var(--teal-2);margin-bottom:1.2rem;
 }
+.card-icon svg{flex-shrink:0;display:block}
+.card-icon-hug img{display:block;object-fit:contain}
 .card h3{font-size:1.2rem;font-weight:800;margin:0 0 .55rem;color:var(--navy)}
 .card p{font-size:.98rem;color:var(--muted);line-height:1.7;margin:0}
 

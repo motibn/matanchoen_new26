@@ -103,6 +103,43 @@ document.getElementById('content-root').innerHTML = `
   </div>
 </section>
 
+<!-- =========== SERVICES =========== -->
+<section id="services" class="services" itemscope itemtype="https://schema.org/ItemList">
+  <meta itemprop="name" content="שירותי הדרכת הורים וייעוץ משפחתי">
+  <div class="wrap">
+    <div class="services-head fi">
+      <span class="eyebrow">השירותים</span>
+      <h2 class="h2">איך אנחנו יכולים לעבוד <em>יחד</em></h2>
+    </div>
+    <div class="cards service-cards">
+      <article class="card service-card fi" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <div itemprop="item" itemscope itemtype="https://schema.org/Service">
+          <h3 itemprop="name">ליווי וייעוץ פרטני (בקליניקה או בזום)</h3>
+          <p itemprop="description">תהליך אישי וממוקד שמותאם בול למשפחה שלכם. יחד, נמפה את האתגרים בבית (מאבקי כוח, שגרת ערב, גבולות) ונצא מהתהליך עם כלים מעשיים, עם הבנה גדולה יותר על הילדים שלכם ועל הקשר שלכם יחד, ועם ביטחון והנאה מההורות.</p>
+        </div>
+      </article>
+      <article class="card service-card fi" style="transition-delay:.08s" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2">
+        <div itemprop="item" itemscope itemtype="https://schema.org/Service">
+          <span class="service-badge service-badge-free">ללא עלות</span>
+          <h3 itemprop="name">שיחת התייעצות ראשונית (ללא עלות)</h3>
+          <p itemprop="description">שיחה קצרה שבה נכיר, נבין מה האתגר המרכזי שלכם כרגע בבית, ונראה איך אני יכול לעזור לכם להחזיר את הרוגע והסמכות ההורית למשפחה.</p>
+          <a href="#cta" class="service-link">למידע נוסף ←</a>
+        </div>
+      </article>
+      <article class="card service-card service-card-soon fi" style="transition-delay:.16s" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3">
+        <div itemprop="item" itemscope itemtype="https://schema.org/Service">
+          <span class="service-badge service-badge-soon">בקרוב</span>
+          <h3 itemprop="name">הרצאות וסדנאות להורים (בקרוב)</h3>
+          <p itemprop="description">בהמשך הדרך יפתחו גם מפגשים קבוצתיים חווייתיים. נדבר בהם בגובה העיניים על האתגרים הבוערים של גידול ילדים במציאות של היום, ונצא עם כלים פרקטיים הביתה.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- =========== TESTIMONIALS =========== -->
 <section id="testimonials" class="testimonials">
   <div class="wrap">

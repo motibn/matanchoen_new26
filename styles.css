@@ -58,10 +58,11 @@ a{color:inherit}
   padding:.55rem 1.05rem;border-radius:9999px;
   font-weight:800 !important;opacity:1 !important;
   font-size:.88rem !important;
+  text-decoration:none !important;
   box-shadow:0 4px 14px rgba(249,115,22,.35);
   transition:background .2s,box-shadow .2s;
 }
-.nav-cta:hover{background:var(--orange-2);box-shadow:0 6px 18px rgba(249,115,22,.45)}
+.nav-cta:hover{background:var(--orange-2);box-shadow:0 6px 18px rgba(249,115,22,.45);text-decoration:none !important}
 .nav-toggle{
   display:none;flex-direction:column;justify-content:center;gap:5px;
   width:44px;height:44px;padding:10px;

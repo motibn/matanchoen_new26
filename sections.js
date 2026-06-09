@@ -5,21 +5,23 @@ document.getElementById('content-root').innerHTML = `
 <section id="story" class="story">
   <div class="wrap">
     <div class="story-grid">
-      <div class="story-text fi">
+      <div class="story-intro fi">
         <span class="eyebrow">מי אני</span>
-        <h2 class="h2">היי, אני <em>מתן כהן</em><br/>מקיבוץ שניר</h2>
-        <p>אבא לזוהר ושחר, ומחנך ב-15 השנים האחרונות.</p>
-        <p>לחיות בגליל בתקופה הזו דורש מכולנו המון כוחות. המציאות בחוץ מלאה בחוסר ודאות, והילדים סופגים הכל.</p>
-        <p>דווקא עכשיו, הבית חייב להיות המקלט הרגשי — המקום שבו מורידים את השכפ"ץ, ולא המקום שבו ממשיכים לנהל קרבות. <strong>אנחנו המבוגר האחראי, ותפקידנו לוודא שהמלחמה נשארת בחוץ.</strong></p>
+        <h2 class="h2">נעים להכיר, אני <em>מתן כהן</em></h2>
+        <p>נשוי לסלעית ואבא לזוהר ושחר. מחנך, ומלווה משפחות בתהליכי ייעוץ והדרכת הורים בגליל.</p>
       </div>
       <div class="story-photo fi" style="transition-delay:.1s">
         <span class="story-photo-deco"></span>
         <span class="story-photo-deco-2"></span>
-        <img src="assets/matan.jpeg" alt="מתן כהן מקיבוץ שניר" />
+        <img src="assets/matan.jpeg" alt="מתן כהן — ייעוץ והדרכת הורים בגליל" />
         <div class="story-photo-tag">
           <span class="dot"></span>
-          <span><strong>מתן כהן</strong> · קיבוץ שניר</span>
+          <span><strong>מתן כהן</strong> · ייעוץ והדרכת הורים</span>
         </div>
+      </div>
+      <div class="story-body fi" style="transition-delay:.15s">
+        <p>את הניסיון שלי בשטח אספתי במשך 15 השנים האחרונות – מהשנים שבהן עבדתי כגנן לגיל הרך, דרך העבודה שלי כמחנך, ומתוך החיים עצמם כאבא. מתוך השליחות הזו, בחרתי להעמיק ולהביא אליכם את הכלים המקצועיים והאפקטיביים ביותר: אני בוגר לימודי NLP ובעל הכשרה מקצועית מקיפה בהדרכת הורים וייעוץ משפחתי.</p>
+        <p>הגישה שלי מאמינה בחיבור לפני תיקון. אני פוגש אתכם בגובה העיניים, בלי שיפוטיות, ומביא אליכם כלים מעשיים שעובדים – גם בלילות העמוסים והמאתגרים ביותר. בואו נוריד את השכפ"ץ, נשאיר את המלחמות בחוץ, ונחזיר יחד את השקט וההנאה להורות שלכם.</p>
       </div>
     </div>
   </div>
@@ -49,7 +51,7 @@ document.getElementById('content-root').innerHTML = `
       <div class="card fi">
         <span class="card-num">01</span>
         <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1"/></svg>
         </div>
         <h3>לכוון את התדר שלנו</h3>
         <p>אנחנו אלו שעורכים את האווירה בבית. לפני שאנחנו מגיבים או שמים גבול — נעצור לשנייה ונשים לב לטון הדיבור שלנו: כועס ומתוח, או מזמין ונעים? כשאנחנו בוחרים בשקט, הבית מסתנכרן איתנו.</p>
@@ -57,7 +59,7 @@ document.getElementById('content-root').innerHTML = `
       <div class="card fi" style="transition-delay:.08s">
         <span class="card-num">02</span>
         <div class="card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3"/><path d="m8 12h.01"/><path d="M2 9h2a2 2 0 0 1 2 2"/><path d="M22 9h-2a2 2 0 0 0-2 2"/><path d="M16 6h2"/><path d="M8 6H6"/><path d="M12 4V2"/><path d="M10 6 8 8"/><path d="M14 6l2 2"/></svg>
         </div>
         <h3>לבנות גשרים של חיבור</h3>
         <p>בזמנים מתוחים הילדים צריכים לדעת שאנחנו שם בשבילם, גם כשאנחנו לא לידם. כשיוצאים — נגיד לילד בדיוק איפה אנחנו ומתי חוזרים. נפחית ביקורת והערות, ונכניס חמלה. כך נוצר בית שפשוט נעים להיות בו, למרות הרעש שבחוץ.</p>
@@ -97,6 +99,32 @@ document.getElementById('content-root').innerHTML = `
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== TESTIMONIALS =========== -->
+<section id="testimonials" class="testimonials">
+  <div class="wrap">
+    <div class="testimonials-head fi">
+      <span class="eyebrow">המלצות</span>
+      <h2 class="h2">מה אומרים <em>ההורים</em></h2>
+    </div>
+    <div class="testimonial-cards">
+      <blockquote class="testimonial-card fi" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-mark">״</div>
+        <p class="testimonial-text" itemprop="reviewBody">יש אנשים שאתה עובר לידם וממשיך הלאה. ויש כאלה שנכנסים ללב. בטוחה שכשאדם כזה מלווה אותך - הדרך חייבת להיות טובה.</p>
+        <footer class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <span itemprop="name">רעות, אמא של תלמידה</span>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial-card fi" style="transition-delay:.08s" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-mark">״</div>
+        <p class="testimonial-text" itemprop="reviewBody">ממליצה בחום. תהליך ששם את הקשר במרכז וממנו צומחים הפירות</p>
+        <footer class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <span itemprop="name">הדס</span>
+        </footer>
+      </blockquote>
     </div>
   </div>
 </section>

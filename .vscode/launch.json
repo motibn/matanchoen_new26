@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "צפייה באתר (Simple Browser)",
+      "type": "simple-browser.show",
+      "url": "http://localhost:8080"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "הפעל שרת + צפייה באתר",
+      "configurations": ["צפייה באתר (Simple Browser)"],
+      "preLaunchTask": "Serve Site",
+      "stopAll": true
+    }
+  ]
+}
